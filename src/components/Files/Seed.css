@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.size {
+  display: flex;
+  margin: auto;
+  width: 1550px;
+  justify-content: center;
+}
+img {
+  width: 1600px;
+  height: 450px;
+}

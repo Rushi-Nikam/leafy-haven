@@ -1,24 +1,89 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Navbar/Header";
+import Navbar from "./components/Navbar/Navbar";
+import Plant from "./components/Files/Plant";
+import Seed from "./components/Files/Seed";
+import Home from "./components/Home";
+import Pro from "./components/Files/Pro";
+import G_toolS from "./components/Files/G_toolS";
+import Services from "./components/Files/Services";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <>
+          <Navbar />
+          <Home />
+        </>
+      ),
+    },
+    {
+      path: "/Plant",
+      element: (
+        <>
+          <Navbar />
+          <Plant />
+        </>
+      ),
+    },
+    {
+      path: "/Seed",
+      element: (
+        <>
+          <Navbar />
+          <Seed />
+        </>
+      ),
+    },
+    {
+      path: "/G_Tools",
+      element: (
+        <>
+          <Navbar />
+          <G_toolS />
+        </>
+      ),
+    },
+    {
+      path: "/Services",
+      element: (
+        <>
+          <Navbar />
+          <Services/>
+        </>
+      ),
+    },
+    {
+      path: "/Seed",
+      element: (
+        <>
+          <Navbar />
+          <Seed />
+        </>
+      ),
+    },
+    {
+      path: "/Pro",
+      // "/Pro/:id"
+      element: (
+        <>
+          <Pro />
+        </>
+      ),
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+
+      <RouterProvider router={router} />
+      <Footer />
+    </>
   );
 }
 

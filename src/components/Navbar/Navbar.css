@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.green {
+  color: green;
+  /* font-size: large; */
+}
+/* 
+ 
+
+/* navbar style start  */
+
+.main-nav {
+  width: 100%;
+  height: 5rem;
+  display: grid;
+  background-color: #fff6f4;
+  grid-template-columns: 5rem 1fr 2fr 1fr 5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.logo {
+  display: grid;
+  /* background-color: #3b5998; */
+  grid-column: 2/3;
+  justify-content: start;
+  align-items: center;
+}
+
+.Nav-link {
+  grid-column: 3/4;
+}
+
+.Nav-link ul {
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Nav-link ul li {
+  padding: 10px;
+  margin: 12px 23px;
+  align-items: center;
+  text-align: center;
+}
+
+.Account-cart {
+  grid-column: 4/5;
+}
+
+.Account-cart ul {
+  height: 4rem;
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Account-cart ul li {
+  text-align: right;
+}
+
+.Account-cart ul li:first-child {
+  grid-column: 2/3;
+}
+
+/* ----------- Grid part ends ----------------- */
+
+.logo h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo h2 span {
+  font-size: 2.4rem;
+}
+
+.Nav-link ul li {
+  font-size: 1.8rem;
+}
+
+.Nav-link ul li a {
+  text-transform: capitalize;
+  color: rgba(0, 0, 3, 0.8);
+  transition: 0.5s;
+}
+.Nav-link ul li:hover > a {
+  transform-origin: left;
+  color: rgba(0, 0, 3, 1);
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.Account-cart ul li {
+  font-size: 1.8rem;
+}
+
+/* .Account-cart {
+  display: none;
+} */
+.hamburger-Menu {
+  display: none;
+}
+
+.search {
+  border: 2px solid black;
+  border-radius: 24px;
+  width: 24rem;
+  padding: 12px;
+  margin: 12px;
+}
+.input {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: #fff6f4;
+}
+/* .hero-section {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+/* .hero-section p {
+  font-size: 3rem;
+  text-transform: capitalize;
+} */
+
+/* .hero-section h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+} */
+
+/* responsive css style  */
+@media (max-width: 1080px) {
+  .main-nav {
+    height: 4rem;
+    grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
+  }
+
+  .logo,
+  .Nav-link ul,
+  .Account-cart ul {
+    height: 8rem;
+  }
+}
+
+/* responsive css style  */
+@media (max-width: 998px) {
+  .main-nav {
+    height: 3rem;
+    grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
+  }
+
+  .Nav-link {
+    display: none;
+  }
+
+  .logo,
+  .Account-cart ul {
+    height: 7rem;
+  }
+
+  .mobile-menu-link {
+    grid-column: 2/4;
+    position: relative;
+    z-index: 99;
+  }
+
+  .mobile-menu-link {
+    background-color: white;
+    height: 20rem;
+    display: grid;
+    grid-column: 2/5;
+    align-items: center;
+    padding-left: 3rem;
+    transition: all 2s linear;
+    transform-origin: top;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+
+  .mobile-menu-link ul {
+    height: 20rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .mobile-menu-link ul li:first-child {
+    transition-delay: 0.2s;
+  }
+
+  .Account-cart {
+    grid-row: 1/2;
+    grid-column: 3/5;
+    justify-items: end;
+    align-items: center;
+    transition: all 2s linear;
+  }
+
+  .Account-cart .Account-cart-desktop {
+    height: 0;
+    display: none;
+  }
+
+  .Account-cart {
+    height: 7rem;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+
+  .Account-cart {
+    display: block;
+    font-size: 2.5rem;
+  }
+  .hamburger-Menu {
+    display: inline;
+    width: 20rem;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 798px) {
+  .main-nav {
+    height: 6rem;
+    grid-template-columns: 1rem 2fr 1fr 1fr 1rem;
+  }
+
+  .logo,
+  .Account-cart ul {
+    height: 6rem;
+  }
+
+  .Account-cart {
+    height: 6rem;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+
+  .Account-cart .hamburger-menu {
+    display: block;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .main-nav {
+    height: 6rem;
+    grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
+  }
+
+  .logo,
+  .Account-cart ul {
+    height: 6rem;
+  }
+
+  .logo h2 {
+    font-size: 2rem;
+  }
+
+  .Account-cart {
+    height: 6rem;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+
+  .Account-cart .hamburger-menu {
+    display: block;
+    font-size: 2.5rem;
+  }
+
+  /* hero section  */
+
+  .hero-section h1 {
+    font-size: 3.8rem;
+  }
+}
